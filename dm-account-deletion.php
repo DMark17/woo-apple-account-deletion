@@ -1,11 +1,11 @@
 <?php
 /**
- * Plugin Name: DM Account Deletion
- * Plugin URI: https://example.com/dm-account-deletion
+ * Plugin Name: woo-apple-account-deletion
+ * Plugin URI: https://github.com/DMark17/woo-apple-account-deletion.git
  * Description: Self-service WooCommerce customer account deletion for WebView apps and Apple App Store account deletion compliance.
  * Version: 1.0.0
- * Author: DM
- * Author URI: https://example.com
+ * Author: Mark Watkiss
+ * Author URI: https://www.digitalmarkonline.co.uk/
  * Text Domain: dm-account-deletion
  * Domain Path: /languages
  * Requires at least: 6.4

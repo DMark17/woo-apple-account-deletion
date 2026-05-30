@@ -1,8 +1,19 @@
-# DM Account Deletion
+# woo-apple-account-deletion
 
-Adds Apple App Store-compliant account deletion to WooCommerce — required for webview-wrapped iOS apps to pass App Review (Guideline 5.1.1).
+Self-service WooCommerce customer account deletion for WebView apps and **Apple App Store Guideline 5.1.1** compliance.
 
-Works equally well on standard WooCommerce stores as a GDPR-friendly self-service account deletion flow.
+Works equally well on standard WooCommerce stores as a GDPR-friendly account deletion flow.
+
+| | |
+|---|---|
+| **Plugin name** | `woo-apple-account-deletion` |
+| **Main file** | `dm-account-deletion.php` |
+| **Text domain** | `dm-account-deletion` |
+| **Domain path** | `/languages` |
+| **PHPDoc package** | `DMAccountDeletion` |
+| **Repository** | [github.com/DMark17/woo-apple-account-deletion](https://github.com/DMark17/woo-apple-account-deletion) |
+
+The WordPress admin plugin list shows **woo-apple-account-deletion**. The text domain (`dm-account-deletion`) matches the main plugin filename and the recommended install folder — use that folder name so translations load from `/languages` correctly.
 
 ---
 
@@ -43,7 +54,7 @@ WooCommerce has no built-in account deletion. This plugin adds a complete, self-
 
 **Via WordPress admin:**
 
-1. Download the latest `.zip` from the [Releases](../../releases) page
+1. Download the latest `.zip` from the [Releases](https://github.com/DMark17/woo-apple-account-deletion/releases) page
 2. Go to **Plugins → Add New → Upload Plugin**
 3. Upload the zip and activate
 
@@ -52,9 +63,12 @@ WooCommerce has no built-in account deletion. This plugin adds a complete, self-
 ```bash
 cd wp-content/plugins
 git clone https://github.com/DMark17/woo-apple-account-deletion.git dm-account-deletion
+cd dm-account-deletion
 ```
 
-Then activate under **Plugins** in your WordPress admin.
+Install into a folder named **`dm-account-deletion`** so the directory slug matches the text domain (`dm-account-deletion`) and translation files in `/languages` resolve correctly. The plugin appears in admin as **woo-apple-account-deletion**.
+
+Then activate **woo-apple-account-deletion** under **Plugins** in your WordPress admin.
 
 After activation, go to **WooCommerce → Account Deletion** to configure.
 
@@ -109,7 +123,23 @@ Orders are detached first, then the WordPress user record is deleted via `wp_del
 
 ---
 
+## Internationalisation
+
+Strings use the text domain **`dm-account-deletion`**. Translation files (`.po` / `.mo`) belong in:
+
+```
+/languages
+```
+
+That path is declared in the plugin header as **Domain Path: `/languages`** and loaded via `load_plugin_textdomain()`.
+
+For translators: generate a `.pot` from the `dm-account-deletion` text domain; do not use the GitHub repo slug (`woo-apple-account-deletion`) as the text domain unless you fork and rename it consistently across all source files.
+
+---
+
 ## Developer Hooks
+
+Hook and filter prefixes use `dm_account_deletion_`. PHPDoc **`@package DMAccountDeletion`** is used across all plugin PHP files.
 
 **Filters**
 
