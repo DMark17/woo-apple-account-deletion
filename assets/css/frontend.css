@@ -1,0 +1,75 @@
+.dmad-account-deletion {
+	max-width: 680px;
+}
+
+.dmad-account-deletion h2 {
+	margin-bottom: 16px;
+}
+
+.dmad-warning {
+	background: #fff5f5;
+	border: 1px solid #d63638;
+	border-radius: 6px;
+	color: #5f1515;
+	margin-bottom: 18px;
+	padding: 16px;
+}
+
+.dmad-warning p {
+	margin: 0;
+}
+
+.dmad-form {
+	border-top: 1px solid #e5e5e5;
+	margin-top: 18px;
+	padding-top: 18px;
+}
+
+.dmad-confirm-row label {
+	align-items: flex-start;
+	display: flex;
+	font-weight: 600;
+	gap: 10px;
+	line-height: 1.4;
+}
+
+.dmad-confirm-row input[type="checkbox"] {
+	flex: 0 0 auto;
+	margin-top: 2px;
+}
+
+.woocommerce .dmad-delete-button,
+.dmad-delete-button {
+	background: #b32d2e;
+	border-color: #8a2424;
+	color: #fff;
+	min-height: 44px;
+	padding-left: 18px;
+	padding-right: 18px;
+}
+
+.woocommerce .dmad-delete-button:hover,
+.woocommerce .dmad-delete-button:focus,
+.dmad-delete-button:hover,
+.dmad-delete-button:focus {
+	background: #8a2424;
+	border-color: #6f1d1d;
+	color: #fff;
+}
+
+.dmad-pending {
+	margin-top: 18px;
+}
+
+@media (max-width: 600px) {
+	.dmad-account-deletion {
+		max-width: none;
+	}
+
+	.woocommerce .dmad-delete-button,
+	.dmad-delete-button {
+		box-sizing: border-box;
+		text-align: center;
+		width: 100%;
+	}
+}
